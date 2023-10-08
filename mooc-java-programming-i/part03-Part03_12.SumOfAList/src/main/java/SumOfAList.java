@@ -6,6 +6,7 @@ public class SumOfAList {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        int sum = 0;
 
         ArrayList<Integer> list = new ArrayList<>();
         while (true) {
@@ -15,10 +16,11 @@ public class SumOfAList {
             }
 
             list.add(input);
+            sum += input;
         }
 
         System.out.println("");
 
-        // toteuta listan lukujen summan laskeminen tänne
+        System.out.println("Sum: " + sum);
     }
 }
