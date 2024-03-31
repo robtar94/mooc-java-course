@@ -16,5 +16,11 @@ public class Song {
         return this.artist + ": " + this.name + " (" + this.durationInSeconds + " s)";
     }
 
+    public boolean equals(Song song1, Song song2) {
+        if (song1.equals(song2)) {
+            return true;
+        }
+        return false;
+    }
 
 }

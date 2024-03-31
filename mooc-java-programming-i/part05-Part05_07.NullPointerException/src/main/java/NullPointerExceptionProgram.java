@@ -15,7 +15,7 @@ public class NullPointerExceptionProgram {
         lines.add("you and I have even heard of the quantum theory and atomic structures. Bohr came");
         lines.add("up with his quantum theory while studying...");
 
-        int index = 0;
+        Integer index = null;
         while (index < lines.size()) {
             System.out.println(lines.get(index));
             index++;
