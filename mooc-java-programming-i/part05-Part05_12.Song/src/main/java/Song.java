@@ -11,16 +11,29 @@ public class Song {
         this.durationInSeconds = durationInSeconds;
     }
 
+    public boolean equals(Object compared) {
+        if (this == compared) {
+            return true;
+        }
+
+        if (!(compared instanceof Song)) {
+            return false;
+        }
+
+        Song comparedSong = (Song) compared;
+
+        if (this.artist == comparedSong.artist
+                && this.name == comparedSong.name
+                && this.durationInSeconds == comparedSong.durationInSeconds) {
+            return true;
+        }
+
+        return false;
+    }
+
     @Override
     public String toString() {
         return this.artist + ": " + this.name + " (" + this.durationInSeconds + " s)";
-    }
-
-    public boolean equals(Song song1, Song song2) {
-        if (song1.equals(song2)) {
-            return true;
-        }
-        return false;
     }
 
 }
